@@ -13,7 +13,7 @@ map<int, int>:: iterator iter;
 int answer = 0;
 queue<pair<int, int>>q;
 bool visited[101] = {0, };
-int dfs();
+int bfs();
 
 int main (){
     ios_base::sync_with_stdio(0);
@@ -29,10 +29,10 @@ int main (){
         cin >> tmp1 >> tmp2;
         snake.insert(make_pair(tmp1, tmp2));
     }
-    cout << dfs();
+    cout << bfs();
 }
 
-int dfs(){
+int bfs(){
     q.push(make_pair(1,0));
     while(!q.empty()){
         answer++;
