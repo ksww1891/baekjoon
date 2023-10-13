@@ -6,6 +6,7 @@ using namespace std;
 int n, m;
 vector<pair<int, pair<int, int>>>edge;
 vector<int>p(1005, -1);
+
 int find(int x){
     if(p[x] < 0) return x;
     return p[x] = find(p[x]);
@@ -14,7 +15,7 @@ int find(int x){
 bool isDiffGroup(int nodeA, int nodeB){
     nodeA = find(nodeA); nodeB = find(nodeB);
     if(nodeA == nodeB)return 0;
-    if(p[nodeA] == p[nodeB]) nodeA--;
+    if(p[nodeA] == p[nodeB]) p[nodeA]--;
     if(p[nodeA] < p[nodeB]) p[nodeB] = nodeA;
     else p[nodeA] = nodeB;
     return 1;
