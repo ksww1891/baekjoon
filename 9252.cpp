@@ -42,7 +42,7 @@ int main(){
             idx2--;
         }
     }
-    cout << answer[(int)A.size()-1][(int)B.size()-1] << '\n';
+    cout << answer[(int)B.size()-1][(int)A.size()-1] << '\n';
     if(answerS.size() > 0){
         for(int i = answerS.size()-1; i >= 0; i--){
             cout << answerS[i];
