@@ -4,7 +4,7 @@ using namespace std;
 
 vector<int>arr;
 int odd, even;
-int n, answer;
+int n;
 
 int main(){
     ios_base::sync_with_stdio(0);
@@ -19,7 +19,7 @@ int main(){
         if(tmp)odd++;
         else even++;
     }
-    int leftOddAnswer = 0, leftEvenAnswer = 0;
+    long long leftOddAnswer = 0, leftEvenAnswer = 0;
     for(int i = 0 ; i < n; i++){
         if(arr[i]){
             if(i >= odd) leftOddAnswer += i - odd;
