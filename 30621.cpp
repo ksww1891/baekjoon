@@ -3,10 +3,10 @@
 using namespace std;
 
 int n;
-int t[100002];
-int b[100002];
-int c[100002];
-int dp[100002];
+long long t[100002];
+long long b[100002];
+long long c[100002];
+long long dp[100002];
 
 int findIDX(int num, int e){
     int s = 1;
@@ -35,7 +35,7 @@ int main(){
         cin >> c[i];
     }
     for(int i = 1; i <= n; i++){
-        dp[i] = max(dp[i-1], dp[findIDX(t[i]-b[i], i-1)-1]+c[i]);
+        dp[i] = max(dp[i-1], dp[findIDX(t[i]-b[i], i)-1]+c[i]);
     }
     cout << dp[n];
 }
