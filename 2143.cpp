@@ -4,10 +4,10 @@
 using namespace std;
 
 int t;
-int n, m, answer;
-int a[1002], b[1002], aSum[1002], bSum[1002];
-vector<int>va;
-vector<int>vb;
+long long n, m, answer;
+long long a[1002], b[1002], aSum[1002], bSum[1002];
+vector<long long>va;
+vector<long long>vb;
 
 int main(){
     ios_base::sync_with_stdio(0);
