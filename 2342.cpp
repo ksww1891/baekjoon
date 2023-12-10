@@ -38,7 +38,7 @@ int main(){
         for(int i = 0; i < 5; i++){
             for(int j = 0; j < 5; j++){
                 if(answer[!toggle][i][j] < INF){
-                    cout << i << j << ' ';
+                    //cout << i << j << ' ';
                     answer[toggle][num][j] = min(answer[toggle][num][j], answer[!toggle][i][j] + cost[i][num]);
                     answer[toggle][i][num] = min(answer[toggle][i][num], answer[!toggle][i][j] + cost[j][num]);
                 }
